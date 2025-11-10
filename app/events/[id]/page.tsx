@@ -61,7 +61,7 @@ export default async function EventDetailPage({
               <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                 <div className="flex-1 w-full">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-3">
-                    <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800">
+                    <CardTitle className="text-xl sm:text-2xl font-bold text-slate-800">
                       {event.title}
                     </CardTitle>
                     <span className={`text-xs font-semibold px-3 py-1.5 rounded-full border whitespace-nowrap ${getCategoryColor(event.category)}`}>

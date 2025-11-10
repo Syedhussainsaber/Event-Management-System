@@ -6,7 +6,6 @@ import { getServerSession } from 'next-auth';
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import mongoose from 'mongoose';
-import { get } from 'http';
 import User from '@/app/models/user.model';
 
 const EventSchema = z.object({
@@ -17,6 +16,7 @@ const EventSchema = z.object({
   category: z.string().min(1, 'Category is required'),
   maxAttendees: z.string().optional(),
 });
+
 
 export async function createEventAction(formData: FormData) {
   try {
@@ -283,7 +283,7 @@ export async function getAllEvents(filters?: {
     }
 
     const events = await Event.find(query)
-      .sort({ date: 1 })
+      .sort({ date: "ascending" })
       .populate('organizer', 'username email')
 
 

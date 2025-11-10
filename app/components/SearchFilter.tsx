@@ -60,7 +60,7 @@ export default function SearchFilter() {
         </div>
         <Button 
           type="submit"
-          className="h-12 px-8 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 sm:w-auto w-full"
+          className="h-12 px-8 cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 sm:w-auto w-full"
         >
           Search
         </Button>
@@ -77,8 +77,8 @@ export default function SearchFilter() {
               onClick={() => handleCategoryChange(category)}
               className={
                 currentCategory === category
-                  ? 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-md border-0 transition-all duration-300'
-                  : 'border-slate-300 text-slate-700 hover:bg-slate-100 hover:border-slate-400 font-medium transition-all duration-300'
+                  ? 'cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-md border-0 transition-all duration-300'
+                  : 'border-slate-300 text-slate-700 hover:bg-slate-100 hover:border-slate-400 font-medium transition-all duration-300 cursor-pointer'
               }
             >
               {category === 'all' ? 'All Categories' : category}

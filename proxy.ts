@@ -8,7 +8,6 @@ export async function proxy(req: NextRequest) {
   const publicRoutes = ["/login", "/register"];
 
 
-
   // If no session, redirect to login page
   if (!session && !publicRoutes.includes(req.nextUrl.pathname)) {
     const loginUrl = new URL("/login", req.url);

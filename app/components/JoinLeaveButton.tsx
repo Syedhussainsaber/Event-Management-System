@@ -36,13 +36,13 @@ export default function JoinLeaveButton({ eventId, isAttending, isFull }: JoinLe
   };
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 flex flex-col items-center">
       {isAttending ? (
         <Button
           onClick={handleLeave}
           disabled={isPending}
           variant="outline"
-          className="w-full cursor-pointer"
+          className="w-[200px] cursor-pointer bg-white text-gray-800 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
         >
           <UserMinus className="h-4 w-4 mr-2" />
           {isPending ? 'Leaving...' : 'Leave Event'}
@@ -51,7 +51,7 @@ export default function JoinLeaveButton({ eventId, isAttending, isFull }: JoinLe
         <Button
           onClick={handleJoin}
           disabled={isPending || isFull}
-          className="w-full cursor-pointer"
+          className="w-[200px] cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
         >
           <UserPlus className="h-4 w-4 mr-2" />
           {isPending ? 'Joining...' : isFull ? 'Event Full' : 'Join Event'}

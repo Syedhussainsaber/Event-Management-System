@@ -16,7 +16,6 @@ export default async function HomePage({
   });
 
 
-  console.log(events);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/30 to-purple-50/30">
@@ -27,7 +26,7 @@ export default async function HomePage({
             <div className="p-2.5 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl shadow-lg">
               <CalendarDays className="h-7 w-7 text-white" />
             </div>
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Upcoming Events
             </h1>
           </div>
